@@ -74,3 +74,30 @@ end
 end
 
 puts "portafolio created"
+
+1.times do |portafolio_item|
+  Portafolio.create!(
+    title: "Portafolio title: #{portafolio_item}",
+    subtitle: "Angular",
+    body: " Facilisis ante nisi eget lectus. Sed a est. Aliquam nec felis eu
+      sem euismod viverra. Suspendisse felis mi, dictum id, convallis ac, mattis non,
+      nibh. Donec sagittis quam eu mauris. Phasellus et leo at quam dapibus
+      pellentesque. In non lacus. Nullam tristique nunc ut arcu scelerisque
+      aliquam. Nullam viverra magna vitae leo. Vestibulum in lacus sit amet
+      lectus tempus aliquet. Duis cursus nisl ac orci. Donec non nisl. Mauris
+      lacus sapien, congue a, facilisis at, egestas vel, quam. Vestibulum ante
+      ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+      Phasellus ipsum odio, suscipit nec, fringilla at, vehicula quis, tellus.
+      Phasellus.",
+      main_image:  "https://via.placeholder.com/600x400",
+      thumb_image: "https://via.placeholder.com/350x200"
+  )
+end
+
+3.times do |technology|
+  Portafolio.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+
+puts "Technology created"

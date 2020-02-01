@@ -14,7 +14,7 @@ class PortafoliosController < ApplicationController
     @portafolio_item = Portafolio.new
   end
 
-  def create
+  def hreate
     @portafolio_item = Portafolio.new(params.require(:portafolio).permit(:title, :subtitle, :body))
 
     respond_to do |format|
