@@ -1,4 +1,4 @@
-3.times do |topic|
+a.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
   )
